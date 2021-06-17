@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-    <keep-alive v-if="$route.meta.keepAlive">
-      <router-view />
-    </keep-alive>
-    <router-view v-else />
+    <Page>
+      <transition mode="out-in" name="fade">
+        <keep-alive v-if="$route.meta.keepAlive">
+          <router-view />
+        </keep-alive>
+        <router-view v-else />
+      </transition>
+    </Page>
   </div>
 </template>
 
-<style lang="less">
-html,
-body,
-#app {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: rgb(23, 22, 24);
-  font-family: Kanit, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-</style>
+<script>
+import Page from './components/layout/page';
+
+export default {
+  components: {
+    Page,
+  },
+};
+</script>
