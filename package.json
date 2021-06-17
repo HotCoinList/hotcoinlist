@@ -1,7 +1,13 @@
 {
   "name": "hotcoinlist",
   "version": "0.1.0",
-  "private": true,
+  "author": "BackRunner",
+  "license": "MIT",
+  "homepage": "https://github.com/HotCoinList/hotcoinlist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HotCoinList/hotcoinlist.git"
+  },
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
