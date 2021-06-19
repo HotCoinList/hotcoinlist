@@ -1,3 +1,11 @@
 {
-  "submit_coin": "Submit Coin"
+  "submit_coin": "Submit Coin",
+  "current_hottest": "Hottest Coins",
+  "coin_list_name": "Name",
+  "coin_list_chain": "Chain",
+  "coin_list_symbol": "Symbol",
+  "coin_list_marketcap": "Market Cap",
+  "coin_list_price": "Price",
+  "coin_list_likes": "Likes",
+  "coin_like_like": "Like"
 }

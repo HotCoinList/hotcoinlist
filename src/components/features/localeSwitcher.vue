@@ -6,7 +6,7 @@
         <span>{{ currentLocale }}</span>
       </div>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item command="zh-CN">中文</el-dropdown-item>
+        <el-dropdown-item command="zh-CN">{{ $t('zh_CN') }}</el-dropdown-item>
         <el-dropdown-item command="en">English</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
@@ -42,6 +42,7 @@ export default {
     cursor: pointer;
     transition: 100ms ease;
     margin-top: 8px;
+    user-select: none;
     svg {
       display: block;
       fill: var(--secondary-text);

@@ -1,3 +1,12 @@
 {
-  "submit_coin": "提交新币"
+  "zh_CN": "中文",
+  "submit_coin": "提交新币",
+  "current_hottest": "时下最热项目",
+  "coin_list_name": "名称",
+  "coin_list_chain": "所属链",
+  "coin_list_symbol": "符号",
+  "coin_list_marketcap": "市场规模",
+  "coin_list_price": "价格",
+  "coin_list_likes": "热度",
+  "coin_list_like": "投票"
 }

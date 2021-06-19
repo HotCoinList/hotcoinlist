@@ -30,6 +30,7 @@ export default {
     display: flex;
     align-items: center;
     color: var(--secondary-text);
+    user-select: none;
     &__copyright {
       margin-right: 12px;
     }
