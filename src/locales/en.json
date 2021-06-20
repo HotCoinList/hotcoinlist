@@ -7,5 +7,6 @@
   "coin_list_marketcap": "Market Cap",
   "coin_list_price": "Price",
   "coin_list_likes": "Likes",
-  "coin_like_like": "Like"
+  "coin_like_like": "Like",
+  "coin_showcase_likes": "{likes} Likes"
 }

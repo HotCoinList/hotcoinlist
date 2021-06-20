@@ -26,7 +26,7 @@
         </td>
         <td class="coin-list-item coin-list-item--likes">{{ row.likes }}</td>
         <td class="coin-list-item coin-list-item--like">
-          <el-button type="primary" round>❤ {{ $t('coin_like_like') }}</el-button>
+          <el-button type="primary" round>❤ {{ $t('coin_list_like') }}</el-button>
         </td>
       </tr>
     </tbody>
@@ -72,8 +72,9 @@ export default {
     font-weight: 600;
     color: var(--regular-text);
     text-shadow: var(--component-text-shadow) 0 2px 8px;
+
     th {
-      padding-left: 8px;
+      padding: 8px;
       box-sizing: border-box;
     }
   }

@@ -8,5 +8,8 @@
   "coin_list_marketcap": "市场规模",
   "coin_list_price": "价格",
   "coin_list_likes": "热度",
-  "coin_list_like": "投票"
+  "coin_list_like": "投票",
+  "coin_showcase_like": "喜欢这个项目",
+  "coin_showcase_contract": "合约地址",
+  "coin_showcase_likes": "{likes} 人喜欢"
 }

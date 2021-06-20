@@ -6,14 +6,22 @@ body,
   min-height: 100vh;
   background-color: var(--page-bg);
   position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-body {
-  margin: 0;
+#app {
+  padding-right: calc(100vw - 100% + 1rem);
 }
 
 * {
   font-family: Kanit, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
     sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+.page-main {
+  width: 100%;
 }
