@@ -1,6 +1,7 @@
 {
   "zh_CN": "中文",
   "submit_coin": "提交新币",
+  "connect_wallet": "连接钱包",
   "current_hottest": "时下最热项目",
   "coin_list_name": "名称",
   "coin_list_chain": "所属链",
@@ -10,6 +11,6 @@
   "coin_list_likes": "热度",
   "coin_list_like": "投票",
   "coin_showcase_like": "喜欢这个项目",
-  "coin_showcase_contract": "合约地址",
-  "coin_showcase_likes": "{likes} 人喜欢"
+  "coin_showcase_likes": "{likes} 人喜欢",
+  "coin_showcase_contract": "合约地址"
 }

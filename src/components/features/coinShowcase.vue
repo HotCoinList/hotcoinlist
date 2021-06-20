@@ -75,6 +75,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
     img {
       width: 142px;
       height: 142px;
@@ -99,6 +100,7 @@ export default {
         border-radius: 10px;
         margin-right: 12px;
         box-shadow: var(--showcase-shadow-lighter) 0 0 6px;
+        user-select: none;
       }
       .coin-showcase__tag--small {
         font-size: 16px;
@@ -136,6 +138,7 @@ export default {
         margin-top: 4px;
         .el-button {
           width: 100%;
+          font-size: 15px;
         }
       }
     }

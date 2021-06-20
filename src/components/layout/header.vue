@@ -9,6 +9,7 @@
       <div class="page-header__right">
         <div class="page-header__submit">
           <el-button type="primary" round>{{ $t('submit_coin') }}</el-button>
+          <el-button type="primary" round>{{ $t('connect_wallet') }}</el-button>
         </div>
       </div>
     </div>
@@ -39,9 +40,12 @@
       display: flex;
       justify-self: end;
       align-items: center;
+      .el-button:first-child {
+        margin-left: 0;
+      }
       .el-button {
-        margin-left: 20px;
-        font-size: 16px;
+        margin-left: 14px;
+        font-size: 15px;
       }
     }
   }

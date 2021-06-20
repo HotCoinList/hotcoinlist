@@ -22,7 +22,8 @@ export default {
 <style lang="less">
 .page-footer-wrapper {
   width: 100%;
-  height: 48px;
+  height: 54px;
+  margin-bottom: 18px;
   .page-footer {
     max-width: 1200px;
     height: 48px;

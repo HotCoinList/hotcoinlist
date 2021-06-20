@@ -10,7 +10,9 @@
     <tbody class="coin-list-body">
       <tr v-for="(row, index) in data" :key="row.symbol">
         <td class="coin-list-item coin-list-item--index">{{ index + indexOffset }}</td>
-        <td class="coin-list-item coin-list-item--logo">Logo Preserve</td>
+        <td class="coin-list-item coin-list-item--logo">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" />
+        </td>
         <td class="coin-list-item coin-list-item--name">{{ row.name }}</td>
         <td class="coin-list-item coin-list-item--chain">
           <span>
@@ -87,7 +89,7 @@ export default {
       font-size: 20px;
       transition: background-color 50ms ease;
       .coin-list-item--index {
-        width: 28px;
+        width: 42px;
       }
       .coin-list-item--chain {
         span {
@@ -96,7 +98,16 @@ export default {
         }
       }
       .coin-list-item--logo {
-        width: 80px;
+        width: 60px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 64px;
+          height: 64px;
+          border-radius: 12px;
+        }
       }
       .coin-list-item--symbol {
         width: 88px;

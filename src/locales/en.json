@@ -1,12 +1,15 @@
 {
   "submit_coin": "Submit Coin",
   "current_hottest": "Hottest Coins",
+  "connect_wallet": "Connect Wallet",
   "coin_list_name": "Name",
   "coin_list_chain": "Chain",
   "coin_list_symbol": "Symbol",
   "coin_list_marketcap": "Market Cap",
   "coin_list_price": "Price",
   "coin_list_likes": "Likes",
-  "coin_like_like": "Like",
-  "coin_showcase_likes": "{likes} Likes"
+  "coin_list_like": "Like",
+  "coin_showcase_like": "Like this project",
+  "coin_showcase_likes": "{likes} Likes",
+  "coin_showcase_contract": "Contract address"
 }
