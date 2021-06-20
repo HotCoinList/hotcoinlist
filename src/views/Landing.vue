@@ -31,12 +31,17 @@ export default {
           symbol: 'pwp',
           chain: 'bsc',
           desc: '赠予pwp.app早期支持者的纪念币',
+          contract: '0x63b009859E022Da8904767dCDcBF20F61C9c406E',
+          marketcap: '10201405.00',
+          price: '0.0000000014',
           likes: 1124,
         },
         {
           name: 'FreeSoftwareCoin',
           symbol: 'FSC',
           chain: 'bsc',
+          marketcap: '10201405.00',
+          price: '0.0000000014',
           likes: 1023,
         },
         {

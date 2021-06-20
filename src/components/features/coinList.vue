@@ -11,7 +11,10 @@
       <tr v-for="(row, index) in data" :key="row.symbol">
         <td class="coin-list-item coin-list-item--index">{{ index + indexOffset }}</td>
         <td class="coin-list-item coin-list-item--logo">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" />
+          <img :src="row.logo" v-if="row.logo" />
+          <div class="coin-list-item--logo__placeholder" v-else>
+            <Coin />
+          </div>
         </td>
         <td class="coin-list-item coin-list-item--name">{{ row.name }}</td>
         <td class="coin-list-item coin-list-item--chain">
@@ -36,6 +39,8 @@
 </template>
 
 <script>
+import Coin from '../icons/coin';
+
 export default {
   props: {
     data: Array,
@@ -43,6 +48,9 @@ export default {
       type: Number,
       default: 1,
     },
+  },
+  components: {
+    Coin,
   },
   data() {
     return {
@@ -74,7 +82,6 @@ export default {
     font-weight: 600;
     color: var(--regular-text);
     text-shadow: var(--component-text-shadow) 0 2px 8px;
-
     th {
       padding: 8px;
       box-sizing: border-box;
@@ -90,23 +97,38 @@ export default {
       transition: background-color 50ms ease;
       .coin-list-item--index {
         width: 42px;
+        user-select: none;
       }
       .coin-list-item--chain {
+        user-select: none;
         span {
           display: block;
           background-color: --chain-tag-bg;
         }
       }
       .coin-list-item--logo {
-        width: 60px;
+        width: 84px;
         height: 72px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         img {
           width: 64px;
           height: 64px;
           border-radius: 12px;
+          vertical-align: middle;
+        }
+        &__placeholder {
+          width: 64px;
+          height: 64px;
+          border-radius: 12px;
+          vertical-align: middle;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--placeholder-bg);
+          svg {
+            width: 36px;
+            height: 36px;
+            fill: var(--placeholder--darker);
+          }
         }
       }
       .coin-list-item--symbol {
@@ -127,13 +149,14 @@ export default {
         width: 164px;
       }
       .coin-list-item--price {
-        width: 260px;
+        width: 252px;
       }
       .coin-list-item--likes {
         width: 72px;
       }
       .coin-list-item--like {
         width: 128px;
+        user-select: none;
         .el-button {
           font-size: 16px;
         }

@@ -1,7 +1,10 @@
 <template>
   <div class="coin-showcase">
     <div class="coin-showcase-logo">
-      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" />
+      <img :src="coin.logo" v-if="coin.logo" />
+      <div class="coin-showcase-logo__placeholder" v-else>
+        <Coin />
+      </div>
     </div>
     <div class="coin-showcase-info">
       <div class="coin-showcase-info__top">
@@ -39,12 +42,17 @@
 </template>
 
 <script>
+import Coin from '../icons/coin';
+
 export default {
   props: {
     coin: {
       type: Object,
       default: () => ({}),
     },
+  },
+  components: {
+    Coin,
   },
   computed: {
     displayLikes() {
@@ -54,10 +62,10 @@ export default {
       return `${this.$t('coin_showcase_contract')}: ${this.coin.contract}`;
     },
     displayMarketCap() {
-      return `${this.$t('coin_list_marketcap')}: ${this.coin.marketcap || '-'}`;
+      return `${this.$t('coin_list_marketcap')}: $ ${this.coin.marketcap || '-'}`;
     },
     displayPrice() {
-      return `${this.$t('coin_list_price')}: ${this.coin.price || '-'}`;
+      return `${this.$t('coin_list_price')}: $ ${this.coin.price || '-'}`;
     },
   },
 };
@@ -80,6 +88,20 @@ export default {
       width: 142px;
       height: 142px;
       border-radius: 20px;
+    }
+    &__placeholder {
+      width: 142px;
+      height: 142px;
+      border-radius: 20px;
+      background-color: var(--component-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 88px;
+        height: 88px;
+        fill: var(--placeholder);
+      }
     }
   }
   &-info {
@@ -118,14 +140,14 @@ export default {
     &__middle {
       .coin-showcase__desc {
         color: var(--regular-text--lighter);
-        font-size: 18px;
+        font-size: 17px;
         margin-top: 4px;
       }
     }
     &__bottom {
       .coin-showcase__info {
         color: var(--regular-text--lighter);
-        font-size: 18px;
+        font-size: 17px;
         margin-top: 4px;
         span {
           margin-right: 16px;
