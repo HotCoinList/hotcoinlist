@@ -2,7 +2,13 @@
   <div class="page-header-wrapper">
     <div class="page-header">
       <div class="page-header__left">
-        <div class="page-header__title">
+        <div
+          :class="{
+            'page-header__title': true,
+            'page-header__title--clickable': titleClickable,
+          }"
+          @click="toHome"
+        >
           <span>HotCoinList</span>
         </div>
       </div>
@@ -38,6 +44,9 @@ export default {
     showSubmitBtn() {
       return this.$route.path !== '/submit';
     },
+    titleClickable() {
+      return this.$route.path !== '/';
+    },
   },
   methods: {
     async handleConnect() {
@@ -49,6 +58,14 @@ export default {
     toSubmit() {
       this.$router.push({
         path: '/submit',
+      });
+    },
+    toHome() {
+      if (!this.titleClickable) {
+        return;
+      }
+      this.$router.push({
+        path: '/',
       });
     },
   },
@@ -76,6 +93,13 @@ export default {
       font-weight: 600;
       letter-spacing: 0.05rem;
       color: var(--primary);
+    }
+    &__title--clickable {
+      cursor: pointer;
+      transition: color 100ms ease;
+    }
+    &__title--clickable:hover {
+      color: var(--primary-hover);
     }
     &__right {
       display: flex;

@@ -30,7 +30,7 @@ export default {
           name: 'pwp Software Coin',
           symbol: 'pwp',
           chain: 'bsc',
-          shortDesc: {
+          slogan: {
             'zh-CN': '赠予pwp.app早期支持者的纪念币',
             en: 'Commemorative coins given to early supporters of pwp.app',
           },
@@ -183,6 +183,7 @@ export default {
       width: 100%;
       margin-bottom: 12px;
       padding: 0 2px;
+      user-select: none;
       &__title {
         color: var(--primary-text);
         font-size: 24px;

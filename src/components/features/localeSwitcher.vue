@@ -41,7 +41,7 @@ export default {
     align-items: center;
     cursor: pointer;
     transition: 100ms ease;
-    margin-top: 8px;
+    margin-top: 4px;
     user-select: none;
     svg {
       display: block;

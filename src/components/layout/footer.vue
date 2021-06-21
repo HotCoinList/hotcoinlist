@@ -1,10 +1,17 @@
 <template>
   <div class="page-footer-wrapper">
     <div class="page-footer">
-      <div class="page-footer__copyright">
-        <span>© 2021 hotcoinlist.net</span>
+      <div class="page-footer-row" v-if="showDataTip">
+        <div class="page-footer__datatip">
+          <span>{{ $t('data_tip') }}</span>
+        </div>
       </div>
-      <LocaleSwitcher />
+      <div class="page-footer-row">
+        <div class="page-footer__copyright">
+          <span>© 2021 hotcoinlist.net</span>
+        </div>
+        <LocaleSwitcher />
+      </div>
     </div>
   </div>
 </template>
@@ -16,24 +23,34 @@ export default {
   components: {
     LocaleSwitcher,
   },
+  computed: {
+    showDataTip() {
+      return this.$route.path === '/';
+    },
+  },
 };
 </script>
 
 <style lang="less">
 .page-footer-wrapper {
   width: 100%;
-  height: 54px;
-  margin-bottom: 18px;
+  padding: 16px 0 20px 0;
+  margin-bottom: 12px;
   .page-footer {
     max-width: 1200px;
-    height: 48px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    color: var(--secondary-text);
     user-select: none;
+    color: var(--secondary-text);
+    .page-footer-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
     &__copyright {
       margin-right: 12px;
+    }
+    &__datatip {
+      font-size: 15px;
     }
   }
 }

@@ -8,7 +8,7 @@
       </tr>
     </thead>
     <tbody class="coin-list-body">
-      <tr v-for="(row, index) in data" :key="row.symbol">
+      <tr v-for="(row, index) in data" :key="row.contract">
         <td class="coin-list-item coin-list-item--index">{{ index + indexOffset }}</td>
         <td class="coin-list-item coin-list-item--logo">
           <img :src="row.logo" v-if="row.logo" />
@@ -82,6 +82,7 @@ export default {
     font-weight: 600;
     color: var(--regular-text);
     text-shadow: var(--component-text-shadow) 0 2px 8px;
+    user-select: none;
     th {
       padding: 8px;
       box-sizing: border-box;
@@ -166,6 +167,9 @@ export default {
       border-radius: 24px;
       background-color: var(--component-hover-bg);
       cursor: pointer;
+    }
+    tr:active {
+      background-color: var(--component-active-bg);
     }
     td {
       padding-left: 8px;

@@ -28,9 +28,9 @@
       </div>
       <div class="coin-showcase-info__bottom">
         <div class="coin-showcase__info">
-          <span>{{ displayContract }}</span>
-          <span>{{ displayMarketCap }}</span>
-          <span>{{ displayPrice }}</span>
+          <span v-html="displayContract"></span>
+          <span v-html="displayMarketCap"></span>
+          <span v-html="displayPrice"></span>
           <span class="coin-showcase__social"></span>
         </div>
         <div class="coin-showcase__action">
@@ -44,6 +44,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import Coin from '../icons/coin';
+import pangu from 'pangu.simple';
 
 export default {
   props: {
@@ -58,22 +59,28 @@ export default {
   computed: {
     ...mapGetters('locale', ['currentLocale']),
     displayDesc() {
-      if (this.coin.desc[this.currentLocale]) {
-        return this.coin.desc[this.currentLocale];
+      if (this.coin.slogan[this.currentLocale]) {
+        return pangu.spacing(this.coin.slogan[this.currentLocale]);
       }
-      return this.coin.desc.en;
+      return this.coin.slogan.en;
     },
     displayLikes() {
       return this.$t('coin_showcase_likes').replace('{likes}', this.coin.likes);
     },
     displayContract() {
-      return `${this.$t('coin_showcase_contract')}: ${this.coin.contract}`;
+      return `<span class="coin-showcase__label">${this.$t('coin_showcase_contract')}</span>: ${
+        this.coin.contract
+      }`;
     },
     displayMarketCap() {
-      return `${this.$t('coin_list_marketcap')}: $ ${this.coin.marketcap || '-'}`;
+      return `<span class="coin-showcase__label">${this.$t('coin_list_marketcap')}</span>: $ ${
+        this.coin.marketcap || '-'
+      }`;
     },
     displayPrice() {
-      return `${this.$t('coin_list_price')}: $ ${this.coin.price || '-'}`;
+      return `<span class="coin-showcase__label">${this.$t('coin_list_price')}</span>: $ ${
+        this.coin.price || '-'
+      }`;
     },
   },
 };
@@ -87,6 +94,8 @@ export default {
   padding: 18px 20px;
   border-radius: 28px;
   box-shadow: var(--showcase-shadow) 0 0 24px;
+  cursor: pointer;
+  transition: background-color 100ms ease;
   &-logo {
     display: flex;
     align-items: center;
@@ -158,20 +167,30 @@ export default {
         font-size: 17px;
         margin-top: 4px;
         span {
-          margin-right: 16px;
+          margin-right: 12px;
         }
         span:last-child {
           margin-right: 0;
         }
       }
+      .coin-showcase__label {
+        user-select: none;
+        font-size: 16px;
+      }
       .coin-showcase__action {
-        margin-top: 4px;
+        margin-top: 8px;
         .el-button {
           width: 100%;
-          font-size: 15px;
+          font-size: 16px;
         }
       }
     }
   }
+}
+.coin-showcase:hover {
+  background-color: var(--showcase-hover-bg);
+}
+.coin-showcase:active {
+  background-color: var(--showcase-active-bg);
 }
 </style>

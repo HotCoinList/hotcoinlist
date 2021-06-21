@@ -1,12 +1,10 @@
 <template>
   <div id="app">
     <Page>
-      <transition mode="out-in" name="fade">
-        <keep-alive v-if="$route.meta.keepAlive">
-          <router-view />
-        </keep-alive>
-        <router-view v-else />
-      </transition>
+      <keep-alive v-if="$route.meta.keepAlive">
+        <router-view />
+      </keep-alive>
+      <router-view v-else />
     </Page>
   </div>
 </template>

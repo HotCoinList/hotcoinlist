@@ -14,6 +14,7 @@
   "wallet_connected": "已连接的钱包",
   "wallet_address": "钱包地址",
   "wallet_disconnect": "断开连接",
+  "data_tip": "本页数据为 7 天内数据，每 30 秒刷新一次",
   "upload_logo": "上传 Logo",
   "submit": "提交",
   "submit_coin": "提交新币",
