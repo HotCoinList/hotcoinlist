@@ -9,12 +9,41 @@
       <div class="page-header__right">
         <div class="page-header__submit">
           <el-button type="primary" round>{{ $t('submit_coin') }}</el-button>
-          <el-button type="primary" round>{{ $t('connect_wallet') }}</el-button>
+          <el-button type="primary" round @click="handleConnect" v-if="!walletAddress">
+            {{ $t('connect_wallet') }}
+          </el-button>
+          <div class="page-header__wallet" @click="openWalletDialog" v-else>
+            <span>{{ walletAddress }}</span>
+          </div>
         </div>
       </div>
+      <WalletDialog ref="walletDialog"></WalletDialog>
     </div>
   </div>
 </template>
+
+<script>
+import { mapGetters } from 'vuex';
+import { connectWallet } from '../../utils/walletConnect';
+import WalletDialog from '../features/walletDialog.vue';
+
+export default {
+  components: {
+    WalletDialog,
+  },
+  computed: {
+    ...mapGetters('wallet', ['walletAddress']),
+  },
+  methods: {
+    async handleConnect() {
+      await connectWallet();
+    },
+    openWalletDialog() {
+      this.$refs.walletDialog.open();
+    },
+  },
+};
+</script>
 
 <style lang="less">
 .page-header-wrapper {
@@ -29,8 +58,10 @@
     user-select: none;
     &__left {
       flex: 1;
+      width: max-content;
     }
     &__title {
+      width: max-content;
       font-size: 24px;
       font-weight: 600;
       letter-spacing: 0.05rem;
@@ -47,6 +78,21 @@
         margin-left: 14px;
         font-size: 15px;
       }
+    }
+    &__wallet {
+      display: inline-block;
+      background-color: var(--component-bg);
+      border-radius: 24px;
+      padding: 12px 23px;
+      margin-left: 14px;
+      color: var(--regular-text);
+      cursor: pointer;
+    }
+    &__wallet:hover {
+      background-color: var(--component-hover-bg);
+    }
+    &__wallet:active {
+      background-color: var(--component-active-bg);
     }
   }
 }

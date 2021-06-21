@@ -11,5 +11,8 @@
   "coin_list_like": "Like",
   "coin_showcase_like": "Like this project",
   "coin_showcase_likes": "{likes} Likes",
-  "coin_showcase_contract": "Contract address"
+  "coin_showcase_contract": "Contract address",
+  "wallet_connected": "Connected Wallet",
+  "wallet_address": "Wallet address",
+  "wallet_disconnect": "Disconnect"
 }

@@ -25,3 +25,62 @@ body,
 .page-main {
   width: 100%;
 }
+
+// button
+
+.el-button--primary {
+  transition: background-color 50ms ease;
+}
+
+.el-button--primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.el-button--primary:active {
+  background-color: var(--primary-active);
+}
+
+// dialog
+
+.v-modal {
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+}
+
+.el-dialog {
+  border-radius: 1rem;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+  .el-dialog__header {
+    display: flex;
+    align-items: center;
+    padding: 24px 28px 8px;
+    user-select: none;
+    span {
+      display: block;
+      flex: 1;
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+    }
+    .el-dialog__headerbtn {
+      justify-self: flex-end;
+      position: initial;
+      top: initial !important;
+      right: initial !important;
+      font-size: 20px;
+      width: 16px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      i {
+        color: var(--primary);
+      }
+      i:hover {
+        color: var(--primary-hover);
+      }
+    }
+  }
+  .el-dialog__body {
+    padding: 12px 28px 24px;
+  }
+}
