@@ -30,7 +30,10 @@ export default {
           name: 'pwp Software Coin',
           symbol: 'pwp',
           chain: 'bsc',
-          desc: '赠予pwp.app早期支持者的纪念币',
+          desc: {
+            'zh-CN': '赠予pwp.app早期支持者的纪念币',
+            en: 'Commemorative coins given to early supporters of pwp.app',
+          },
           contract: '0x63b009859E022Da8904767dCDcBF20F61C9c406E',
           marketcap: '10201405.00',
           price: '0.0000000014',

@@ -23,7 +23,7 @@
       </div>
       <div class="coin-showcase-info__middle">
         <div class="coin-showcase__desc">
-          <span>{{ coin.desc }}</span>
+          <span>{{ displayDesc }}</span>
         </div>
       </div>
       <div class="coin-showcase-info__bottom">
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Coin from '../icons/coin';
 
 export default {
@@ -55,6 +56,13 @@ export default {
     Coin,
   },
   computed: {
+    ...mapGetters('locale', ['currentLocale']),
+    displayDesc() {
+      if (this.coin.desc[this.currentLocale]) {
+        return this.coin.desc[this.currentLocale];
+      }
+      return this.coin.desc.en;
+    },
     displayLikes() {
       return this.$t('coin_showcase_likes').replace('{likes}', this.coin.likes);
     },

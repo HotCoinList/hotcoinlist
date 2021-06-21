@@ -16,6 +16,9 @@ export default {
   },
   getters: {
     currentLocale: (state) => {
+      return state.locale;
+    },
+    currentLocaleText: (state) => {
       return localeMap[state.locale];
     },
   },

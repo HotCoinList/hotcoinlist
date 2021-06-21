@@ -3,7 +3,7 @@
     <el-dropdown @command="handleCommand" size="small" placement="top" trigger="click">
       <div class="i18n">
         <Earth />
-        <span>{{ currentLocale }}</span>
+        <span>{{ currentLocaleText }}</span>
       </div>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item command="zh-CN">{{ $t('zh_CN') }}</el-dropdown-item>
@@ -22,7 +22,7 @@ export default {
     Earth,
   },
   computed: {
-    ...mapGetters('locale', ['currentLocale']),
+    ...mapGetters('locale', ['currentLocaleText']),
   },
   methods: {
     ...mapMutations('locale', ['setLocale']),
