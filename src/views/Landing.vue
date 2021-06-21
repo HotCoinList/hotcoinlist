@@ -1,6 +1,6 @@
 <template>
   <div class="page-main page-landing">
-    <div class="hottest">
+    <div class="page-main-section hottest">
       <div class="hottest-header">
         <div class="hottest-header__title">
           <span>{{ $t('current_hottest') }}</span>
@@ -30,7 +30,7 @@ export default {
           name: 'pwp Software Coin',
           symbol: 'pwp',
           chain: 'bsc',
-          desc: {
+          shortDesc: {
             'zh-CN': '赠予pwp.app早期支持者的纪念币',
             en: 'Commemorative coins given to early supporters of pwp.app',
           },
@@ -177,19 +177,7 @@ export default {
 
 <style lang="less">
 .page-landing {
-  position: relative;
-  margin: 16px 0 32px 0;
   .hottest {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    padding: 28px 32px;
-    background-color: var(--component-bg);
-    box-sizing: border-box;
-    border-radius: 32px;
-    box-shadow: var(--component-shadow) 0 0 28px;
-    border: var(--component-border) solid 1px;
     animation: hottestListGlow 3s linear alternate infinite;
     &-header {
       width: 100%;

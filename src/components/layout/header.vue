@@ -8,7 +8,9 @@
       </div>
       <div class="page-header__right">
         <div class="page-header__submit">
-          <el-button type="primary" round>{{ $t('submit_coin') }}</el-button>
+          <el-button type="primary" round v-if="showSubmitBtn" @click="toSubmit">{{
+            $t('submit_coin')
+          }}</el-button>
           <el-button type="primary" round @click="handleConnect" v-if="!walletAddress">
             {{ $t('connect_wallet') }}
           </el-button>
@@ -33,6 +35,9 @@ export default {
   },
   computed: {
     ...mapGetters('wallet', ['walletAddress']),
+    showSubmitBtn() {
+      return this.$route.path !== '/submit';
+    },
   },
   methods: {
     async handleConnect() {
@@ -40,6 +45,11 @@ export default {
     },
     openWalletDialog() {
       this.$refs.walletDialog.open();
+    },
+    toSubmit() {
+      this.$router.push({
+        path: '/submit',
+      });
     },
   },
 };

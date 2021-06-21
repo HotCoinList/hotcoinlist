@@ -10,6 +10,11 @@ const routes = [
     name: 'Landing',
     component: Landing,
   },
+  {
+    path: '/submit',
+    name: 'Submit',
+    component: () => import('../views/Submit.vue'),
+  },
 ];
 
 const router = new VueRouter({

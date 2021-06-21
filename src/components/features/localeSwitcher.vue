@@ -6,7 +6,7 @@
         <span>{{ currentLocaleText }}</span>
       </div>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item command="zh-CN">{{ $t('zh_CN') }}</el-dropdown-item>
+        <el-dropdown-item command="zh-CN">中文</el-dropdown-item>
         <el-dropdown-item command="en">English</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>

@@ -1,6 +1,4 @@
 {
-  "zh_CN": "中文",
-  "submit_coin": "提交新币",
   "connect_wallet": "连接钱包",
   "current_hottest": "时下最热项目",
   "coin_list_name": "名称",
@@ -15,5 +13,19 @@
   "coin_showcase_contract": "合约地址",
   "wallet_connected": "已连接的钱包",
   "wallet_address": "钱包地址",
-  "wallet_disconnect": "断开连接"
+  "wallet_disconnect": "断开连接",
+  "upload_logo": "上传 Logo",
+  "submit": "提交",
+  "submit_coin": "提交新币",
+  "submit_desc": "若要向 HotCoinList 添加新的项目，请您仔细填写下方的表单。\n我们会在您完成提交后对信息进行审核，项目页面将在审核后可用。\n当您的项目收获了超过 500 个喜欢后，您的项目可以被搜索。\n当您的项目在7天内收获的喜欢数量位于全站前 20 时，您的项目将被列入“时下最热项目”。",
+  "submit_name": "项目名称",
+  "submit_chain": "所属链",
+  "submit_contract": "合约地址",
+  "submit_minting_date": "铸币日",
+  "submit_shortdesc_en": "一句话描述（英文）",
+  "submit_shortdesc_cn": "一句话描述（中文）",
+  "submit_desc_en": "项目描述（英文）",
+  "submit_desc_cn": "项目描述（中文）",
+  "submit_whitepaper": "白皮书地址",
+  "submit_website": "项目网站"
 }

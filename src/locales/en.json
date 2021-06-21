@@ -1,7 +1,6 @@
 {
-  "submit_coin": "Submit Coin",
-  "current_hottest": "Hottest Coins",
   "connect_wallet": "Connect Wallet",
+  "current_hottest": "Hottest Coins",
   "coin_list_name": "Name",
   "coin_list_chain": "Chain",
   "coin_list_symbol": "Symbol",
@@ -14,5 +13,19 @@
   "coin_showcase_contract": "Contract address",
   "wallet_connected": "Connected Wallet",
   "wallet_address": "Wallet address",
-  "wallet_disconnect": "Disconnect"
+  "wallet_disconnect": "Disconnect",
+  "upload_logo": "Upload Logo",
+  "submit": "Submit",
+  "submit_coin": "Submit Coin",
+  "submit_desc": "To add a new project to HotCoinList, please fill out the form below carefully.\nWe will review the information after you complete your submission and the project page will be available after review.\nAfter your project has received more than 500 likes, your project will be searchable.\nWhen your project is in the top 20 likes within 7 days, your project will be listed in the \"Hottest Coins\".",
+  "submit_name": "Coin name",
+  "submit_chain": "Chain",
+  "submit_contract": "Contract address",
+  "submit_minting_date": "Date of minting",
+  "submit_shortdesc_en": "Slogan (English)",
+  "submit_shortdesc_cn": "Slogan (Chinese)",
+  "submit_desc_en": "Description (English)",
+  "submit_desc_cn": "Description (Chinese)",
+  "submit_whitepaper": "Whitepaper URL",
+  "submit_website": "Website"
 }
